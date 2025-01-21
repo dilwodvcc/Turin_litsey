@@ -1,0 +1,7 @@
+#Vendor papka
+vendor
+#.env
+.env
+#.idea
+.idea
+node_modules
