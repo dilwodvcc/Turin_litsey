@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Models\User;
 use App\Traits\Validator;
 use JetBrains\PhpStorm\NoReturn;
+use Src\Auth;
 
 class UserController{
     use Validator;
@@ -43,21 +44,19 @@ class UserController{
             ], 201);
         }
     }
-    #[NoReturn] public function show(): void
-    {
-        apiResponse([
-            'user'=>
-            [
-                'name' => 'John Doe',
-                'email' => 'john@doe.com',
-            ]
-        ]);
-    }
     #[NoReturn] public function logout(): void
     {
         unset($_SESSION['user']);
         apiResponse([
             'message' => 'User logged out successfully'
+        ]);
+    }
+    #[NoReturn] public function show(): void
+    {
+        $user = Auth::user();
+        apiResponse([
+            'message'=>'User information',
+            'data'=> $user
         ]);
     }
 }

@@ -5,7 +5,6 @@ namespace App\Models;
 use App\Traits\HasApiTokens;
 use PDOException;
 
-
 class User extends DB
 {
     use HasApiTokens;
@@ -13,19 +12,13 @@ class User extends DB
     {
         $query = "INSERT INTO users (full_name, email, password, updated_at, created_at) 
             VALUES (:full_name, :email, :password, NOW(), NOW())";
-        $stmt = $this->conn
-            ->prepare($query);
-            if($stmt->execute([
+        $this->conn
+            ->prepare($query)
+            ->execute([
             "full_name" => $fullName,
             "email" => $email,
             "password" => password_hash($password, PASSWORD_DEFAULT)
-        ]))
-        {
-            $user_id = $this->conn->lastInsertId();
-            $_SESSION['user_id'] = $user_id;
-            $_SESSION['full_name'] = $fullName;
-            $_SESSION['email'] = $email;
-        }
+        ]);
         $userId = $this->conn->lastInsertId();
         $this->CreateApiToken($userId);
         return true;
@@ -52,17 +45,26 @@ class User extends DB
         $query = "SELECT * FROM users WHERE email = :email";
         $stmt = $this->conn
             ->prepare($query);
-        if($stmt->execute([
+        $stmt->execute([
             "email" => $email
-        ]))
-        {
-            $_SESSION['email'] = $email;
-        }
+        ]);
         $user = $stmt->fetch();
-        if ($user&&password_verify($password, $user->password)) {
+        if ($user&&password_verify($password, $user->password))
+        {
             $this->CreateApiToken($user->id);
             return true;
         }
         return false;
+    }
+
+    public function getUserById(int $id)
+    {
+        $query = "SELECT id, full_name, email, created_at, updated_at FROM users WHERE id = :id";
+        $stmt = $this->conn
+            ->prepare($query);
+        $stmt->execute([
+            ":id" => $id,
+        ]);
+        return $stmt->fetch();
     }
 }

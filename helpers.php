@@ -13,14 +13,28 @@ use JetBrains\PhpStorm\NoReturn;
     echo json_encode($data);
     exit;
 }
-function view($page, $data = []): void
+function view_dash($page, $data = []): void
+{
+    extract($data);
+    require 'resources/views/dashboard/' . $page . '.php';
+    exit();
+}
+
+function view_home($page, $data = []): void
 {
     extract($data);
     require 'resources/views/' . $page . '.php';
+    exit();
+}
+function view_auth($page, $data = []): void
+{
+    extract($data);
+    require 'resources/views/auth/' . $page . '.php';
+    exit();
 }
 
 #[NoReturn] function redirect($page): void
 {
-    header('Location:' . $page);
+    header('Location:'. $page);
     exit;
 }

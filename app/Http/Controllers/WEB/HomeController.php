@@ -2,76 +2,64 @@
 
 namespace App\Http\Controllers\WEB;
 
+use App\Models\Quiz;
 use JetBrains\PhpStorm\NoReturn;
 
 class HomeController
 {
     public function home(): void
     {
-        view('home');
+        view_home('home');
     }
     public function login(): void
     {
-        view('login');
+        view_auth('login');
     }
     public function register(): void
     {
-        view('register');
+        view_auth('register');
     }
     public function about(): void
     {
-        view('about');
+        view_home('about');
+    }
+    public function turin(): void
+    {
+        view_home('turin');
     }
     #[NoReturn] public function add_quiz(): void
     {
-        if ($_SESSION['email'])
-        {
             require "public/js/add-quiz.js";
-        }
-        redirect('/login');
     }
     #[NoReturn] public function create_quiz(): void
     {
-        if ($_SESSION['email'])
-        {
-        view('create-quiz');
-        }
-        redirect('/login');
+        view_dash('create-quiz');
     }
     #[NoReturn] public function dashboard(): void
     {
-        if ($_SESSION['email'])
-        {
-            view('dashboard');
-        }
-        redirect('/login');
+            view_dash('dashboard');
     }
     #[NoReturn] public function my_quizzes(): void
     {
-        if ($_SESSION['email'])
-        {
-            view('my-quizzes');
-        }
-        redirect('/login');
+            view_dash('my-quizzes');
     }
     #[NoReturn] public function statistics(): void
     {
-        if ($_SESSION['email'])
-        {
-            view('statistics');
-        }
-        redirect('/login');
+            view_dash('statistics');
     }
-    #[NoReturn] public function how_it_works(): void
+    #[NoReturn] public function programs(): void
     {
-        if ($_SESSION['email'])
-        {
-            view('how-it-works');
-        }
-        redirect('/login');
+        view_home('programs');
     }
     public function features(): void
     {
-        view('home');
+        view_home('home');
     }
+    public function update(int $id): void
+    {
+        view_dash('update-quiz', [
+            'id' => $id,
+        ]);
+    }
+
 }
