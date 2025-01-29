@@ -1,113 +1,126 @@
-<script src="/js/about.js"></script>
-<link rel="stylesheet" href="/css/about.css">
-<main class="main-content">
-    <section class="slideshow">
-        <div class="slideshow-inner">
-            <div class="slides">
-                <div class="slide is-active ">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title">Slide title 1</div>
-                            <div class="text">
-                                <p>Slide description 1</p>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+<div>
+
+    <section class="relative h-screen bg-gray-100 flex items-center justify-center">
+        <!-- Slayder Konteyneri -->
+        <div class="slider relative h-[60%] w-[90%] overflow-hidden">
+            <!-- Slayder Rasmlar Kartalari -->
+            <div class="slides flex h-full transition-transform duration-500 ease-in-out">
+                <!-- Slayd 1 -->
+                <div class="flex flex-shrink-0 w-full justify-around">
+                    <div class="relative w-[70%] h-[100%] bg-white rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+                        <img src="https://travelshelper.com/wp-content/uploads/2021/11/Cambridge-Travel-Guide-Travel-S-Helper.jpg" class="w-full h-full object-cover" alt="Cambridge Travel">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold">Cambridge Travel</h2>
+                                <p class="text-sm mt-2">Discover a beautiful city filled with history and culture.</p>
                             </div>
-                            <a href="#" class="btn">
-                                <span class="btn-inner">Learn More</span>
-                            </a>
                         </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg" alt=""
-                             class="image"/>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title">Slide title 2</div>
-                            <div class="text">
-                                <p>Slide description 2</p>
+                <!-- Slayd 2 -->
+                <div class="flex flex-shrink-0 w-full justify-around">
+                    <div class="relative w-[70%] h-[100%] bg-white rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/79/6a/80/796a80a9cce81fcc618b2405e050b54c.jpg" class="w-full h-full object-cover" alt="Beautiful Nature">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold">Beautiful Nature</h2>
+                                <p class="text-sm mt-2">Connect with nature in serene and picturesque surroundings.</p>
                             </div>
-                            <a href="#" class="btn">
-                                <span class="btn-inner">Learn More</span>
-                            </a>
                         </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg" alt=""
-                             class="image"/>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title">Slide title 3</div>
-                            <div class="text">
-                                <p>Slide description 3</p>
+                <!-- Slayd 3 -->
+                <div class="flex flex-shrink-0 w-full justify-around">
+                    <div class="relative w-[70%] h-[100%] bg-white rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+                        <img src="https://wallpaperaccess.com/full/317501.jpg" class="w-full h-full object-cover" alt="Mountain Retreat">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold">Mountain Retreat</h2>
+                                <p class="text-sm mt-2">Escape to the tranquility of the mountains.</p>
                             </div>
-                            <a href="#" class="btn">
-                                <span class="btn-inner">Learn More</span>
-                            </a>
                         </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg" alt=""
-                             class="image"/>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title">Slide title 4</div>
-                            <div class="text">
-                                <p>Slide description 4</p>
+                <!-- Slayd 4 -->
+                <div class="flex flex-shrink-0 w-full justify-around">
+                    <div class="relative w-[70%] h-[100%] bg-white rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+                        <img src="https://cdn1.ozone.ru/s3/multimedia-6/6325084110.jpg" class="w-full h-full object-cover" alt="Modern Cityscape">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold">Modern Cityscape</h2>
+                                <p class="text-sm mt-2">Experience the vibrant energy of a modern city.</p>
                             </div>
-                            <a href="#" class="btn">
-                                <span class="btn-inner">Learn More</span>
-                            </a>
                         </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg"
-                             alt="" class="image"/>
                     </div>
                 </div>
             </div>
-            <div class="pagination">
-                <div class="item is-active">
-                    <span class="icon">1</span>
-                </div>
-                <div class="item">
-                    <span class="icon">2</span>
-                </div>
-                <div class="item">
-                    <span class="icon">3</span>
-                </div>
-                <div class="item">
-                    <span class="icon">4</span>
-                </div>
-            </div>
-            <div class="arrows">
-                <div class="arrow prev">
-          <span class="svg svg-arrow-left">
-            <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                 x="0px" y="0px" width="14px" height="26px"
-                 viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path
-                        d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> </svg>
-            <span class="alt sr-only"></span>
-          </span>
-                </div>
-                <div class="arrow next">
-          <span class="svg svg-arrow-right">
-            <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                 x="0px" y="0px" width="14px" height="26px"
-                 viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path
-                        d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> </svg>
-            <span class="alt sr-only"></span>
-          </span>
-                </div>
+            <!-- Tugmalar -->
+            <div class="absolute inset-0 flex items-center justify-between px-4 z-20">
+                <button id="prev" class="text-white bg-black rounded-full p-3 shadow-lg hover:bg-gray-800 text-2xl">
+                    &#8249;
+                </button>
+                <button id="next" class="text-white bg-black rounded-full p-3 shadow-lg hover:bg-gray-800 text-2xl">
+                    &#8250;
+                </button>
             </div>
         </div>
     </section>
-</main></body>
+
+    <style>
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides > div {
+            flex: 0 0 100%; /* Har bir slayd butun kenglikni egallaydi */
+        }
+    </style>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides > div');
+        let index = 0;
+
+        function showNextSlide() {
+            index++;
+            if (index >= images.length) index = 0;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function showPrevSlide() {
+            index--;
+            if (index < 0) index = images.length - 1;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Avtomatik slayder
+        const interval = setInterval(showNextSlide, 4000);
+
+        // Tugmalar
+        document.getElementById('next').addEventListener('click', () => {
+            clearInterval(interval);
+            showNextSlide();
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            clearInterval(interval);
+            showPrevSlide();
+        });
+    </script>
+
+</div>
+
+
+</body>
 </html>
